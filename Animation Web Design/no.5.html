@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            position: fixed;
+            width: 100%;
+            height: 110vh;
+            /* background-color:aqua */
+        }
+
+        body {
+            height: 3000px;
+        }
+
+
+        .img1 {
+            width: 100%;
+            height: 100%;
+            transition: all 3s ;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            background-image: url('./img/no.25.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .img2 {
+            width: 100%;
+            height: 100%;
+            transition: all 3s ;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 6;
+            background-image: url('./img/no.26.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            transform: scale(1);
+            opacity: 0;
+        }
+
+        .img3 {
+          width: 100%;
+          height: 100%;
+          transition: all 3s ;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 7;
+          background-image: url('./img/no.27.png');
+          background-repeat: no-repeat;
+          background-size: cover;
+          transform: scale(1);
+          opacity: 0;
+
+        }
+        .img4 {
+          width: 100%;
+          height: 100%;
+          transition: all 3s ;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 8;
+          background-image: url('./img/no.28.png');
+          background-repeat: no-repeat;
+          background-size: cover;
+          transform: scale(1);
+          opacity: 0;
+
+        }
+
+        .input1 {
+          position: absolute;
+          right: 22%;
+          top: 48%;
+          z-index: 17;
+          font-size: 17px;
+          width: 500px;
+          font-weight: 600;
+          transition: all 3s ease;
+          opacity: 0;
+          color: #00FFFF;
+        }
+        .input2 {
+          position: absolute;
+          right: 22.2%;
+          top: 58%;
+          z-index: 17;
+          font-size: 17px;
+          width: 500px;
+          font-weight: 600;
+          transition: all 3s ease;
+          opacity: 0;
+          color: #00FFFF;
+        }
+
+
+    </style>
+    <title>Unit:2|University Culture</title>
+</head>
+
+<body>
+    <div class="box">
+        <div class="img1">
+
+        </div>
+        <div class="img2">
+
+        </div>
+        <div class="img3">
+
+        </div>
+        <div class="img4">
+
+        <div class="input1">
+        <input type="button" value="Go to The Red to see more interesting culture studies topics!" style="background: #808080; opacity: 0.5; border: none" onclick="window.open('https://www.xiaohongshu.com/user/profile/5ef61b7a00000000010045de?xhsshare=CopyLink&appuid=5ef61b7a00000000010045de&apptime=1639328964')">
+        </div>
+
+        <div class="input2">
+        <input type="button" value="Continue to unclock the unknown ghost !" style="background: #808080; opacity: 0.5; border: none" onclick="window.open('file:///Users/qingyuan/Desktop/Web%20and%20Social%20media_Qingyuan%20Zheng/no.6.html')">
+        </div>
+
+    </div>
+</body>
+<script>
+    var img1 = document.querySelector('.img1')
+    var img2 = document.querySelector('.img2')
+    var img3 = document.querySelector('.img3')
+    var img4 = document.querySelector('.img4')
+    var input1 = document.querySelector('.input1')
+    var input2 = document.querySelector('.input2')
+    window.onscroll = function () {
+        var heightTop = document.documentElement.scrollTop || document.body.scrollTop;
+        console.log(heightTop)
+
+        if (heightTop > 200) {
+           img2.style.opacity = '1'
+
+        }
+        if (heightTop > 800) {
+            img2.style.opacity = "0"
+            img3.style.opacity = '1'
+
+        }
+        if(heightTop > 1200) {
+            img4.style.opacity = '1'
+            input1.style.opacity = '1'
+            input2.style.opacity = '1'
+        }
+    }
+</script>
+
+</html>

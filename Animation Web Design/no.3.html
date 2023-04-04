@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            /* background-color:aqua */
+        }
+
+        body {
+            height: 4000px;
+        }
+
+
+        .img1 {
+            width: 100%;
+            height: 120%;
+            transition: all 3s ;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 5;
+            background-image: url('./img/no.9.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .img2 {
+            width: 100%;
+            height: 120%;
+            transition: all 3s ;
+            position: absolute;
+            top: 0;
+            left: 50;
+            z-index: 6;
+            background-image: url('./img/no.10.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            transform: scale(1);
+            opacity: 0;
+        }
+
+        .img3 {
+          width: 100%;
+          height: 120%;
+          transition: all 3s ;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 7;
+          background-image: url('./img/no.11.png');
+          background-repeat: no-repeat;
+          background-size: cover;
+          transform: scale(1);
+          opacity: 0;
+
+        }
+        .img4 {
+          width: 100%;
+          height: 120%;
+          transition: all 3s ;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 4;
+          background-image: url('./img/no.12.png');
+          background-repeat: no-repeat;
+          background-size: cover;
+          transform: scale(1);
+          opacity: 1;
+
+        }
+        .img5 {
+          width: 100%;
+          height: 120%;
+          transition: all 3s ;
+          position: absolute;
+          top:  0;
+          left: 0;
+          z-index: 5;
+          background-image: url('./img/no.13.png');
+          background-repeat: no-repeat;
+          background-size: contain;
+          transform: scale(1.5);
+          opacity: 0;
+
+        }
+        .img6 {
+          width: 100%;
+          height: 120%;
+          transition: all 3s ;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 6;
+          background-image: url('./img/no.14.png');
+          background-repeat: no-repeat;
+          background-size: cover;
+          transform: scale(1);
+          opacity: 0;
+
+        }
+        .img7 {
+          width: 100%;
+          height: 120%;
+          transition: all 3s ;
+          position: absolute;
+          top:  0;
+          left: 0;
+          z-index: 8;
+          background-image: url('./img/no.15.png');
+          background-repeat: no-repeat;
+          background-size: 100% auto;
+          opacity: 0;
+        }
+
+        .input1 {
+          position: absolute;
+          right: 18%;
+          top: 56%;
+          z-index: 17;
+          font-size: 17px;
+          width: 500px;
+          font-weight: 600;
+          transition: all 3s ease;
+          opacity: 0;
+          color: #40E0D0;
+        }
+        .input2 {
+          position: absolute;
+          right: 18.2%;
+          top: 64%;
+          z-index: 17;
+          font-size: 17px;
+          width: 500px;
+          font-weight: 600;
+          transition: all 3s ease;
+          opacity: 0;
+          color: #40E0D0;
+        }
+    </style>
+    <title>Unit:1|Gender Culture</title>
+</head>
+
+<body>
+    <div class="box">
+        <div class="img1">
+
+        </div>
+        <div class="img2">
+
+        </div>
+        <div class="img3">
+
+        </div>
+        <div class="img4">
+
+        </div>
+        <div class="img5">
+
+        </div>
+        <div class="img6">
+
+        </div>
+        <div class="img7">
+
+        </div>
+        <div class="input1">
+          <input type="button" value="Continue to next interesting topic" style="background: #D2B48C; opacity: 0.5; border: none" onclick="window.open('file:///Users/qingyuan/Desktop/Web%20and%20Social%20media_Qingyuan%20Zheng/no.4.html')">
+        </div>
+
+        <div class="input2">
+          <input type="button" value="Go to The Red to discuss with the ghost" style="background: #D2B48C; opacity: 0.5; border: none" onclick="window.open('http://xhslink.com/GK894e')">
+        </div>
+    </div>
+</body>
+<script>
+    var img1 = document.querySelector('.img1')
+    var img2 = document.querySelector('.img2')
+    var img3 = document.querySelector('.img3')
+    var img4 = document.querySelector('.img4')
+    var img5 = document.querySelector('.img5')
+    var img6 = document.querySelector('.img6')
+    var img7 = document.querySelector('.img7')
+    var input1 = document.querySelector('.input1')
+    var input2 = document.querySelector('.input2')
+    window.onscroll = function () {
+        var heightTop = document.documentElement.scrollTop || document.body.scrollTop;
+        console.log(heightTop)
+
+        if (heightTop > 200) {
+           img2.style.opacity = '1'
+
+        }
+        if (heightTop > 600) {
+            img3.style.opacity = '1'
+
+        }
+        if(heightTop > 1000) {
+            img1.style.opacity = '0'
+            img2.style.opacity = '0'
+            img3.style.opacity = '0'
+            img1.style.transition = 'all 2s ease'
+            img2.style.transition = 'all 2s ease'
+            img3.style.transition = 'all 2s ease'
+        }
+        if (heightTop > 1400) {
+            img5.style.opacity = '1'
+        }
+
+        if (heightTop > 1800) {
+            img5.style.transform = 'scale(1)'
+        }
+        if (heightTop > 2200) {
+            img6.style.opacity ='1'
+        }
+        if (heightTop > 2600) {
+            img7.style.opacity = '1'
+            input1.style.opacity = '1'
+            input2.style.opacity = '1'
+        }
+    }
+</script>
+
+</html>
